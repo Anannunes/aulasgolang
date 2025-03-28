@@ -3,16 +3,15 @@ package main
 import "fmt"   
 
 func main(){ 
-	var a int
-	var b int
-	fmt.Println("Digite um numero:")
-	fmt.Scan(&a)
-	fmt.Println("digite outro numero:")
-	fmt.Scan(&b)
-	fmt.Println(" A soma é: ", a + b)
-	fmt.Println("A subtração é:", a - b)
-	fmt.Println("a divisão é:", a / b)
-	fmt.Println("A multiplicação é:", a * b)
-	fmt.Println("O resto da divisão: ", a % b)
-
+	var senha int
+	var usuario string
+	fmt.Println("Digite seu nome de usuario:")
+	fmt.Scan(&usuario)
+	fmt.Println("Digite sua senha:")
+	fmt.Scan(&senha)
+	if usuario == "admin" && senha==1234 {
+	fmt.Println("pode entrar")
+} else {
+    fmt.Println("acesso negado,tentar novamente")
+}
 }
