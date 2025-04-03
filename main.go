@@ -24,6 +24,6 @@ func main(){
 	var superherois = []string{"Deadpool","Homem Aranha","Motoqueiro Fantasma"}
 	fmt.Println(superherois)
 	superherois = append(superherois, "Homem De Ferro","Ben10")
-	fmt.Println(superherois, len(superherois),cap(superherois))a
+	fmt.Println(superherois, len(superherois),cap(superherois))
 	
 }
