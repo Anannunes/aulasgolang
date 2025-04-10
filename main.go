@@ -1,13 +1,33 @@
 package main
+ 
  import "fmt"
+ 
+ func main() {
+    age := 45
+ fmt.Println(age <=50)
+ fmt.Println(age >=50)
+ fmt.Println(age ==50)
+ fmt.Println(age !=50)
 
-func main() {
-	numeros := [5]int {}
-fmt.Println("digite 5 numeros")
-fmt.Scan(&numeros[0])
-fmt.Scan(&numeros[1])
-fmt.Scan(&numeros[2])
-fmt.Scan(&numeros[3])
-fmt.Scan(&numeros[4])
-fmt.Println("a soma é ", numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4])
+ if age <50{
+    fmt.Println("menor que 30 anos")
+ } else if age <40{
+    fmt.Println("menor que 40 anos") 
+ }else{
+    fmt.Println("não é menos que 40 anos")
+ }
+names:=[]string{"Isadora","Yasmim","Trunks","Cebolinha", "Martin","Yuri"}
+
+for index, value :=range names{
+    if index == 1{
+        fmt.Println("continua após a posição", index,"e value",value)
+        continue
+    }
+if index >2{
+    fmt.Println("sair após", index)
+    break 
 }
+fmt.Println("valor: ", value)
+ }
+
+ }
