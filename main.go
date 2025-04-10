@@ -1,27 +1,13 @@
 package main
-
-import (
-"fmt"
-"sort"
-)
+ import "fmt"
 
 func main() {
-	var ages = []int{17, 16, 20, 40}
-	names := []string{"mario", "luigi", "homem aranha", "batman"}
-	sort.Ints(ages)
-	fmt.Println(ages)
-	fmt.Println(names)
-	fmt.Println(sort.SearchStrings(names, "caroline"))
-
-	for x:=0; x > 5; x++ {
-		fmt.Println(x)
-	}
-	for i := 1; i < len(names); i++ {
-		fmt.Println(names[i])
-
-	}
-		
-	for index, value := range ages {
-			fmt.Println(" o indice é", index," e o valor", value)
-	}
+	numeros := [5]int {}
+fmt.Println("digite 5 numeros")
+fmt.Scan(&numeros[0])
+fmt.Scan(&numeros[1])
+fmt.Scan(&numeros[2])
+fmt.Scan(&numeros[3])
+fmt.Scan(&numeros[4])
+fmt.Println("a soma é ", numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4])
 }
