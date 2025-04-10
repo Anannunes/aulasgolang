@@ -1,25 +1,27 @@
 package main
 
 import (
-	"fmt"
-	"sort"
-	"strings"
+"fmt"
+"sort"
 )
 
-func main(){ 
-	greeting :="Hello my friends!"
-	fmt.Println(strings.Contains(greeting,"dog"))
-    fmt.Println(strings.ReplaceAll(greeting,"my", "mine"))
-	fmt.Println(strings.ToUpper(greeting))
-	fmt.Println(strings.Index(greeting,"friends"))
-	ages := []int{50, 80, 10}
-    sort.Ints(ages)
+func main() {
+	var ages = []int{17, 16, 20, 40}
+	names := []string{"mario", "luigi", "homem aranha", "batman"}
+	sort.Ints(ages)
 	fmt.Println(ages)
-	index := sort.SearchInts(ages, 80)
-	fmt.Println(index)	
-	names := []string{"caroline","maicon","diego"}
-	sort.Strings(names)
 	fmt.Println(names)
-	fmt.Println(sort.SearchStrings(names,"caroline"))
+	fmt.Println(sort.SearchStrings(names, "caroline"))
 
+	for x:=0; x > 5; x++ {
+		fmt.Println(x)
+	}
+	for i := 1; i < len(names); i++ {
+		fmt.Println(names[i])
+
+	}
+		
+	for index, value := range ages {
+			fmt.Println(" o indice é", index," e o valor", value)
+	}
 }
