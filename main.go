@@ -1,22 +1,23 @@
 package main
  
- import (
-    "fmt")
+import (
+   "fmt")
 
-func dadosPessoa(idade int) (int, string){
-var condicao string
-if idade >= 18 {
-    condicao = "você é maior de idade"
-} else {
-    condicao = "você é menor de idade"
-}
-return idade, condicao
-}
 
 func main(){
-    var idadeusuario int
-fmt.Println("qual sua idade?")
-fmt.Scan(&idadeusuario)
-idade, condicao := dadosPessoa(idadeusuario)
-fmt.Println("você tem", idade, "anos e", condicao)
+   alunoidade := make(map[string]int)
+   alunoidade ["fabiano"] = 16
+   alunoidade ["gisele"] = 18
+   alunoidade ["abobora"] = 3
+   alunoidade ["xerequinha"] = 15
+   fmt.Println("idade da xana", alunoidade["xerequinha"])
+   notasalunos := map[string]float64{
+	   "fabiano" : 7.9,
+	   "abobora" : 10,
+	   "xerequinha" : 3.8,
+	   "gisele" : 10,
+   } 
+   for nome, nota := range notasalunos{
+fmt.Printf("%s tirou a nota %.1f\n", nome, nota )
+   }
 }
