@@ -1,21 +1,30 @@
 package main
- 
- import (
-    "fmt")
 
-func main(){
-estoque := make(map[string]int)
-estoque["coxinha"]=10
-estoque["pão de queijo"]=15
-estoque["refrigerante"]=20
+import "fmt"
 
-for produtos, quantidade := range estoque {
-    fmt.Printf("%s tem %d unidades sobrando \n", produtos, quantidade)
+var nota1 float64
+var nota2 float64
+var media float64
+
+func analisarNotas (nota1, nota2 float64) (float64, string) {
+    media = (nota1 + nota2) / 2
+    if media < 0 || media > 10 {
+        fmt.Println("Nota inválida!")
+    } else if media >= 7 {
+        return media, "Aprovado"
+    } else if media < 7 {
+        return media, "Reprovado"
+
+    }
+    return media, ""
 }
-fmt.Println("------------------- vendas --------------------")
-estoque["coxinha"]-=2
-estoque["pão de queijo"]-=1
-for produtos, quantidade := range estoque {
-    fmt.Printf("%s agora tem %d unidades sobrando \n", produtos, quantidade)
-}
-}
+
+func main (){
+    fmt.Println("Digite a primeira nota:")
+    fmt.Scanln(&nota1)
+    fmt.Println("Digite a segunda nota:")
+    fmt.Scanln(&nota2)
+    media, resultado := analisarNotas(nota1, nota2)
+    fmt.Printf("A média é: %.2f\n", media)
+    fmt.Println("Resultado: ", resultado)
+    }
