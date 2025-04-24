@@ -1,24 +1,21 @@
 package main
  
-import (
-   "fmt")
+ import (
+    "fmt")
 
 func main(){
-   capitais ;=map[string]string{ 
-   "SP" : "São Paulo"
-   "RJ" : "Rio de Janeiro "
-   "ES" : "Espirito Santo"
+estoque := make(map[string]int)
+estoque["coxinha"]=10
+estoque["pão de queijo"]=15
+estoque["refrigerante"]=20
+
+for produtos, quantidade := range estoque {
+    fmt.Printf("%s tem %d unidades sobrando \n", produtos, quantidade)
 }
- capitais["BH"] = "Belo Honizonte"
-
- for k,v := range capitais{
-   fmt.Println("Sigla, Nome", k, v)
- }
- delete(capitais, "AC")
-
- fork, v :=range capitais{
-   fmt.Println?("Sigla, Nome", k, v)
-   {
-
-   }
- }
+fmt.Println("------------------- vendas --------------------")
+estoque["coxinha"]-=2
+estoque["pão de queijo"]-=1
+for produtos, quantidade := range estoque {
+    fmt.Printf("%s agora tem %d unidades sobrando \n", produtos, quantidade)
+}
+}
